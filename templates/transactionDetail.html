@@ -1,0 +1,145 @@
+<ion-view>
+  <ion-nav-title>Transaction Detail</ion-nav-title>
+  <ion-nav-buttons side="left">
+    <button class="button button-clear button-positive" href="#/firsPage">Previous</button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <button class="button button-clear button-positive" href="#/transactionFailed" ng-disabled="!checked">Next</button>
+  </ion-nav-buttons>
+
+
+  <ion-content >
+    <label>Click me to toggle: <input type="checkbox" ng-model="checked"></label><br/>
+      <h4>Card Used:</h4>
+      <div class="list">
+        <label class="item item-select">
+          <select required>
+            <option value="" disabled selected hidden>Select a card</option>
+            <option>Visa</option>
+            <option>MasterCard</option>
+            <option>Amex</option>
+          </select>
+        </label>
+      </div><hr>
+
+      <h4>Transaction Type:</h4>
+      <div class="button-bar">
+        <button class="button button-positive button-small button-block button-outline" style="border-radius:-7px -7px -7px -7px;" >Purchase</button>
+        <button class="button button-positive button-small button-block button-outline" >Refund</button>
+      </div>
+
+      <h4>Comments:</h4>
+      <div class="list" >
+        <label class="item item-select">
+          <span class="input-label"></span>
+          <select>
+            <option value="" disabled selected hidden>Select a comment</option>
+            <option>Credit/Debit Option</option>
+            <option>Debit run as credit</option>
+            <option>ID required</option>
+            <option>High Value Transaction</option>
+            <option>Cash back</option>
+            <option>None</option>
+            <option>Other</option>
+          </select>
+        </label>
+      </div><hr>
+
+      <h4>Orientations:</h4>
+      <div class="list"  >
+        <label class="item item-select">
+          <span class="input-label"></span>
+          <select>
+            <option value="" disabled selected hidden>Select an orientation</option>
+            <option>Portait</option>
+            <option>Portait Face Down</option>
+            <option>LandScape</option>
+            <option>Land Scape Face Down</option>
+            <option>Other</option>
+          </select>
+        </label>
+      </div>
+
+      <h4>Range:</h4>
+      <div class="button-bar">
+        <button class="button button-positive button-small button-block button-outline" >Touch</button>
+        <button class="button button-positive button-small button-block button-outline" >Range 1</button>
+        <button class="button button-positive button-small button-block button-outline" >Range 2</button>
+      </div><hr>
+
+      <h4>Pass/Fail:</h4>
+      <div class="button-bar">
+        <button class="button button-positive button-small button-block button-outline" >Pass</button>
+        <button class="button button-positive button-small button-block button-outline" >Fail</button>
+      </div>
+
+      <h4>Attempts:</h4>
+      <div class="button-bar">
+        <button class="button button-positive button-small button-block button-outline" >1</button>
+        <button class="button button-positive button-small button-block button-outline" >2</button>
+        <button class="button button-positive button-small button-block button-outline" >3</button>
+      </div>
+
+      <h4>Signature:</h4>
+      <div class="button-bar">
+        <button class="button button-positive button-small button-block button-outline" >Yes</button>
+        <button class="button button-positive button-small button-block button-outline" >No</button>
+        <button class="button button-positive button-small button-block button-outline" >NA</button>
+      </div>
+
+      <h4>Debit Asked Pin?:</h4>
+      <div class="button-bar">
+        <button class="button button-positive button-small button-block button-outline" >Yes</button>
+        <button class="button button-positive button-small button-block button-outline" >No</button>
+        <button class="button button-positive button-small button-block button-outline" >NA</button>
+      </div><hr>
+
+      <h4>Notification on Passbook UI?</h4>
+      <div class="button-bar">
+        <button class="button button-positive button-small button-block button-outline" >Yes</button>
+        <button class="button button-positive button-small button-block button-outline" >No</button>
+      </div>
+
+      <h4>Displayed Merchant Name?</h4>
+      <div class="button-bar">
+        <button class="button button-positive button-small button-block button-outline" >Yes</button>
+        <button class="button button-positive button-small button-block button-outline" >No</button>
+      </div>
+
+      <h4>Displayed Amount?</h4>
+      <div class="button-bar">
+        <button class="button button-positive button-small button-block button-outline" >Yes</button>
+        <button class="button button-positive button-small button-block button-outline" >No</button>
+      </div><hr>
+
+      <h4>Other Comments:</h4>
+      <div class="list">
+        <label class="item item-input">
+          <input class="item item-input text-center" type="text" placeholder="Enter comment">
+        </label>
+      </div>
+
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Amount:</span>
+          <input class="item item-input" type="number" placeholder="$">
+        </label>
+      </div>
+
+      <h4>Purchased Item Category:</h4>
+      <div class="button-bar">
+        <button class="button button-positive button-small button-block button-outline" >Perishable</button>
+        <button class="button button-positive button-small button-block button-outline" >Non-Perishable</button>
+      </div>
+
+      <h4>Purchased Item Details/Reader Info:</h4>
+      <div class="list">
+        <label class="item item-input">
+          <input class="item item-input text-center" type="text" placeholder="Item / POS reader info">
+        </label>
+      </div><hr><br><br><br>
+
+  </ion-content>
+</ion-view>
+
+

@@ -1,0 +1,91 @@
+
+<ion-view view-title="DUT and Cards Info" >
+  <ion-nav-buttons side="left">
+    <a class="button button-clear button-positive" href="#/firstPage">Previous</a>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <a class="button button-clear button-positive"  href="#/firstPage" >Done</a>
+  </ion-nav-buttons>
+
+  <ion-content ng-controller="myController" >
+      <h4>Device Info:</h4>
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Device Type:</span>
+          <input class="item item-input text-center" type="text" placeholder="Enter device type" ng-model="deviceType" required>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Serial Number:</span>
+          <input class="item item-input text-center" type="text" placeholder="Enter device serial number" ng-model="sn" required>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">SW Version:</span>
+          <input class="item item-input text-center" type="text" placeholder="e.g. 12B385" ng-model="sw" required>
+        </label>
+        <button class="button button-clear button-positive" ng-click="saveDutInfo()">Save Device</button>
+        <button class="button button-clear button-positive" ng-click="showConfirm(0)">Clear All Records</button>
+        <button class="button button-clear button-positive" ng-click="read(0)">Show DUTs</button><br>
+        <div ng-repeat="n in b">
+          {{n}}<br>
+        </div>
+
+      </div><hr>
+
+      <h4>Payment Card:</h4>
+      <div class="button-bar">
+        <span class="padding">Card Type:</span>
+        <a class="button button-positive button-block button-small button-outline" ng-class="{'active': var == 'Credit'}" ng-click="setActive('Credit')">Credit</a>
+        <a class="button button-positive button-block button-small button-outline" ng-class="{'active': var == 'Debit'}" ng-click="setActive('Debit')">Debit</a>
+      </div>
+
+    <div class="list">
+      <label class="item item-input">
+        <span class="input-label">Issuing Bank:</span>
+        <input class="item item-input text-center" type="text" placeholder="Enter the name of the bank" ng-model="issuingBnak" required>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">PNO:</span>
+        <input class="item item-input text-center" type="text" placeholder="Enter the type of the card" ng-model="pno" required>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Last 4 FPAN:</span>
+        <input class="item item-input text-center" type="number" placeholder="Enter last four digits FPAN" ng-model="fpan" required>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Last 4 DPAN:</span>
+        <input class="item item-input text-center" type="number" placeholder="Enter last four digits FPAN" ng-model="dpan" required>
+      </label>
+      <button class="button button-clear button-positive" ng-click="saveDutCardInfo()">Save Payment Card</button>
+      <button class="button button-clear button-positive" ng-click="showConfirm(1)">Clear All Records</button>
+      <button class="button button-clear button-positive" ng-click="read(1)">Show DUT Cards</button><br>
+      <div ng-repeat="n in d">
+        {{n}}<br>
+      </div>
+      </div><hr>
+
+      <h4>Contactless Card:</h4>
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Card Type:</span>
+          <input class="item item-input text-center" type="text" placeholder="Enter the type of the card" ng-model="refCardType" required>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Issuing Bank:</span>
+          <input class="item item-input text-center" type="text" placeholder="Enter the name of the bank" ng-model="refBank" required>
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Last 4 Digits:</span>
+          <input class="item item-input text-center" type="number" placeholder="Enter last four digits FPAN" ng-model="refFpan" required>
+        </label>
+        <button class="button button-clear button-positive" ng-click="saveRefInfo()">Save Contactless Card</button>
+        <button class="button button-clear button-positive" ng-click="showConfirm(2)">Clear All Records</button>
+        <button class="button button-clear button-positive" ng-click="read(2)">Show Ref Cards</button><br>
+        <div ng-repeat="n in f">
+          {{n}}<br>
+        </div>
+      </div><hr>
+
+
+  </ion-content>
+</ion-view>

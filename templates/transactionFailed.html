@@ -1,0 +1,97 @@
+<ion-view view-title="Transaction Failed" >
+  <ion-nav-buttons side="left">
+    <a class="button button-clear button-positive" href="#/transactionDetail"></a>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <a class="button button-clear button-positive">Done</a>
+  </ion-nav-buttons>
+
+
+  <ion-content >
+      <h4>Technology Available?</h4>
+      <div class="button-bar">
+        <button class="button button-positive button-small button-block button-outline" style="border-radius:-7px -7px -7px -7px;" >Yes</button>
+        <button class="button button-positive button-small button-block button-outline" >No</button>
+      </div><hr>
+
+      <h4>Reader Beep:</h4>
+      <div class="button-bar">
+        <button class="button button-positive button-small button-block button-outline" >Once</button>
+        <button class="button button-positive button-small button-block button-outline" >Twice</button>
+        <button class="button button-positive button-small button-block button-outline" >None</button>
+      </div>
+
+      <h4>Reader Light:</h4>
+      <div class="button-bar">
+        <button class="button button-positive button-small button-block button-outline" >0</button>
+        <button class="button button-positive button-small button-block button-outline" >1</button>
+        <button class="button button-positive button-small button-block button-outline" >2</button>
+        <button class="button button-positive button-small button-block button-outline" >3</button>
+        <button class="button button-positive button-small button-block button-outline" >4</button>
+        <button class="button button-positive button-small button-block button-outline" >5</button>
+      </div><hr>
+
+      <h4>Passbook UI:</h4>
+      <div class="list">
+        <label class="item item-select">
+          <span class="input-label"></span>
+          <select>
+            <option value="" disabled selected hidden>Select a Passbook UI response</option>
+            <option>Done</option>
+            <option>Couldn't complete payment</option>
+            <option>Touch ID/Passcode require to pay</option>
+            <option>Payment card not available</option>
+            <option>other</option>
+          </select>
+        </label>
+      </div>
+
+      <h4>Failed Comments:</h4>
+      <div class="list">
+        <label class="item item-select">
+          <span class="input-label"></span>
+          <select>
+            <option value="" disabled selected hidden>Select a failed comment</option>
+            <option>Reader not working</option>
+            <option>Card not accepted</option>
+            <option>Card declined from backend</option>
+            <option>Tender can't be processed</option>
+            <option>Try another card</option>
+            <option>Paid using physical swipe</option>
+            <option>No reader response</option>
+            <option>Fraud alert</option>
+            <option>Cashier does not allow</option>
+            <option>Insufficient funds</option>
+            <option>other</option>
+          </select>
+        </label>
+      </div><hr>
+
+      <h4>Contactless Card:</h4>
+      <div class="list">
+        <label class="item item-select">
+          <span class="input-label">Card Info:</span>
+          <select>
+            <option value="" disabled selected hidden>Select the contactless reference card used</option>
+            <option>Visa</option>
+            <option>MasterCard</option>
+            <option>Amex</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="button-bar">
+        <span class="input-label">Pass/Fail:</span>
+        <button class="button button-positive button-small button-block button-outline" >Pass</button>
+        <button class="button button-positive button-small button-block button-outline" >Fail</button>
+      </div><hr>
+
+      <h4>Any Other Comments:</h4>
+      <div class="list">
+        <label class="item item-input">
+          <input class="item item-input text-center" type="text" placeholder="DUT, POS/reader, ref card response, don't use comma">
+        </label>
+      </div><hr><br><br><br>
+
+  </ion-content>
+

@@ -1,0 +1,82 @@
+<ion-view view-title="P3 PayApp V1.0" align-title="center" >
+  <ion-nav-buttons side="left">
+    <a class="button button-icon icon ion-compose" href="#/Records" ></a>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <a class="button button-clear button-positive" href="#/transactionDetail" ng-disabled="!model || !cityChecked">Next</a>
+  </ion-nav-buttons>
+
+  <br><br>
+  <h4 >Store Name</h4>
+  <div class="list list-inset">
+    <label class="item item-input">
+      <input ion-autocomplete type="text" readonly="readonly" class="ion-autocomplete text-center" autocomplete="off"
+       ng-model="model"
+       item-value-key="name"
+       item-view-value-key="view"
+       items-method="getTestItems(query,1)"
+       items-method-value-key="items"
+       placeholder="Enter store name"
+       items-clicked-method="itemsClicked(callback)"
+       items-removed-method="itemsRemoved(callback)"
+       max-selected-items="1"
+      />
+    </label>
+    <label class="item item-input">
+      <span class="input-label">Multiple select autocomplete model value</span>
+      <input type="text" class="ion-autocomplete-test-model" ng-model="model" autocomplete="off">{{model}}
+    </label>
+  </div>
+
+  <h4 >Major City</h4>
+  <div class="list list-inset">
+    <label class="item item-input">
+      <input ion-autocomplete type="text" readonly="readonly" class="ion-autocomplete text-center" autocomplete="off"
+       ng-model="cityChecked"
+       item-value-key="name"
+       item-view-value-key="view"
+       items-method="getTestItems(query,2)"
+       items-method-value-key="items"
+       placeholder="Enter city name"
+       items-clicked-method="itemsClicked(callback)"
+       items-removed-method="itemsRemoved(callback)"
+       done-button-clicked-method="donelButtonClickedMethod(callback)"
+       max-selected-items="1"/>
+    </label>
+    <label class="item item-input">
+      <span class="input-label">Multiple select autocomplete model value</span>
+      <input type="text" class="ion-autocomplete-test-model" ng-model="cityChecked" autocomplete="off">{{cityChecked}}
+    </label>
+  </div>
+
+  <h4 >Transaction Time</h4>
+  <div class="card">
+    <div class="item item-text-wrap text-center">
+      {{date | date:'medium'}}
+    </div>
+  </div>
+
+
+  <h4>Store Address</h4>
+  <div class="card">
+    <div class="item item-text-wrap text-center">
+      99 westwood dr<br>
+      kitchener, ON, Canada<br>
+      N2M 2K7<br>
+    </div>
+  </div>
+
+  <div class="tabs tabs-positive tabs-icon-left">
+    <a class="tab-item">
+      <i class="icon ion-edit"></i>
+    </a>
+    <a class="tab-item">
+      <i class="icon ion-star"></i>
+    </a>
+    <a class="tab-item" href="#/dutCardInfo">
+      <i class="icon ion-plus"></i>
+    </a>
+  </div>
+
+
+</ion-view>

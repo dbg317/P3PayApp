@@ -1,0 +1,35 @@
+/* Empty. Add your own CSS if you like */
+.item .item-input {
+  background-color: palegreen;
+}
+
+.ion-autocomplete.text-center.ng-touched.ng-dirty.ng-valid.ng-empty {
+  background-color: palegreen;
+}
+
+.ion-autocomplete.text-center.ng-touched.ng-dirty.ng-not-empty.ng-invalid.ng-invalid-parse {
+  background-color: palegreen;
+}
+
+.ion-autocomplete.text-center.ng-pristine.ng-untouched.ng-valid.ng-empty {
+  background-color: palegreen;
+}
+
+.ion-autocomplete.text-center.ng-pristine.ng-touched.ng-valid.ng-empty {
+  background-color: palegreen;
+}
+.button-clear.button-clear {
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+  color: blue;
+}
+
+.center{
+  margin: auto;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
